@@ -1,0 +1,27 @@
+  
+h1{
+    color: pink;
+}
+
+#todo{
+    background-color: rgba(97, 207, 170, 0.685);
+    border-style: groove;
+    border-color: rgb(0, 162, 255);
+    border-width: 7px;
+}
+
+#list{
+    background-color: rgba(208, 255, 0, 0.726);
+    border-style: groove;
+    border-color: coral;
+    border-width: 7px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+body{
+    background-color: rgba(1, 225, 255, 0.486);
+}

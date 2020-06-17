@@ -1,64 +1,37 @@
-
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
+import "./index.css";
+import Todo from "./components/Todo"
+import List from "./components/List"
 
-const header = (
-    <h1>My TODO-LIST</h1>
-);
+const dataTodo = [
+    {label: "text", important: false},
+    {label: "text1", important: false},
+    {label: "text2", important: false},
+    {label: "text3", important: false},
+];
 
-
-
-
-const Todo = () => {
-    return (
-        <div className="col-9">
-            <h2>H2 text</h2>
-            <input type="text" size="10"/>
-            <button>Add</button><br/>
-            <input id="input1" type="radio"/><label htmlFor="input1">text 1</label>
-            <br/>
-            <input id="input2" type="radio"/><label htmlFor="input2">text 2</label>
-            <br/>
-            <input id="input3" type="radio"/><label htmlFor="input3">text 3</label>
-            <br/>
-        </div>
-    );
-}
-
-
-
-
-const List = () => {
-    return (
-        <div className="col-3">
-            <h2>H2 text</h2>
-            <input type="text" size="10"/>
-            <br/>
-            <input id="input1.1" type="checkbox"/><label htmlFor="input1.1">text 1.1</label>
-            <br/>
-            <input id="input2.2" type="checkbox"/><label htmlFor="input2.2">text 1.2</label>
-            <br/>
-            <input id="input3.3" type="checkbox"/><label htmlFor="input3.3">text 1.3</label>
-            <br/>
-        </div>
-    );
-}
-
-
-
+const dataList = [
+    {label: "text1.0", important: false},
+    {label: "text1.1", important: false},
+    {label: "text1.2", important: false},
+    {label: "text1.3", important: false}
+];
+const header = <h1>My TODO-List</h1>;
 
 const App = () => {
-    return (
-        <div className="container">
-           <div className="row justify-content-center">
-               {header}
+    return(
+        <div className="containter">
+            {header}
+            <div className="row justify-content-center">
+                <div id="todo" className="col-3"><Todo dataTodo={dataTodo}/></div>
+                <div className="col-1"></div>
+                <div id="list" className="col-3"><List dataList={dataList}/>
+                </div>
             </div>
-            <div className="row">
-                <Todo/>
-                <List/>
-           </div>
         </div>
     )
 }
 
-ReactDOM.render(<App/> , document.getElementById("root"));
+
+ReactDOM.render(<App/>, document.getElementById("root"));
