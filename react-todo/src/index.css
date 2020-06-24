@@ -1,6 +1,7 @@
   
 h1{
     color: pink;
+    text-align: center;
 }
 
 #todo{
@@ -11,17 +12,30 @@ h1{
 }
 
 #list{
-    background-color: rgba(208, 255, 0, 0.726);
+    background-color: rgba(194, 243, 19, 0.726);
     border-style: groove;
     border-color: coral;
     border-width: 7px;
 }
 
-h1{
-    text-align: center;
-}
-
-
 body{
     background-color: rgba(1, 225, 255, 0.486);
+}
+
+input[type="text"]{
+    width: 370px;
+}
+
+.todo-list{
+    display: inline;
+}
+
+.important{
+    color: red;
+    font-weight: bold;
+}
+
+.checked{
+    color: black;
+    text-decoration: line-through;
 }
